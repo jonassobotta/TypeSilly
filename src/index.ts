@@ -1,12 +1,15 @@
 import * as ts from 'typescript';
-import booleanSwitcher from './booleanSwitcher';
 import identifierRenamer from './idnetifierRenamer';
+import booleanSwitcher from './booleanSwitcher';
 
-const transformer: ts.TransformerFactory<ts.SourceFile> = context => {
+const combinedTransformer: ts.TransformerFactory<ts.SourceFile> = context => {
+  const identifierTransformer = identifierRenamer(context);
+  const booleanTransformer = booleanSwitcher(context);
+
   return sourceFile => {
-    const identifierTransformed = identifierRenamer(context)(sourceFile);
-    return booleanSwitcher(context)(identifierTransformed);
+    const transformedSourceFile = identifierTransformer(sourceFile) as ts.SourceFile;
+    return booleanTransformer(transformedSourceFile) as ts.SourceFile;
   };
 };
 
-export default transformer;
+export default combinedTransformer;
