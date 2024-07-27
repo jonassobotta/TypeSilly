@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import booleanSwitcher from '../src/booleanSwitcher';
+import booleanSwitcher from '../src/transformers/booleanSwitcher';
 
 function compile(source: string, transformers: ts.CustomTransformers): string {
   const sourceFile = ts.createSourceFile('test.ts', source, ts.ScriptTarget.Latest);

@@ -4,11 +4,11 @@
   "description": "TypeSilly is a just for fun silly typescript custom transformer.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && node dist/compile.js examples/test.ts",
+    "build": "tsc && node dist/main.js examples/simpleExample.ts",
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jonas Sobotta",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.5.12",

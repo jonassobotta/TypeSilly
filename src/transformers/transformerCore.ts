@@ -2,7 +2,7 @@ import * as ts from 'typescript';
 import identifierRenamer from './idnetifierRenamer';
 import booleanSwitcher from './booleanSwitcher';
 
-const combinedTransformer: ts.TransformerFactory<ts.SourceFile> = context => {
+const transformerCore: ts.TransformerFactory<ts.SourceFile> = context => {
   const identifierTransformer = identifierRenamer(context);
   const booleanTransformer = booleanSwitcher(context);
 
@@ -12,4 +12,4 @@ const combinedTransformer: ts.TransformerFactory<ts.SourceFile> = context => {
   };
 };
 
-export default combinedTransformer;
+export default transformerCore;

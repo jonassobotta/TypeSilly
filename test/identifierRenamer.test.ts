@@ -1,5 +1,5 @@
 import * as ts from 'typescript';
-import identifierRenamer from '../src/idnetifierRenamer';
+import identifierRenamer from '../src/transformers/idnetifierRenamer';
 
 function compile(source: string, transformers: ts.CustomTransformers): string {
     const sourceFile = ts.createSourceFile('test.ts', source, ts.ScriptTarget.Latest);
