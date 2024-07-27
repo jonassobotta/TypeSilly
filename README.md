@@ -24,7 +24,7 @@ npm install typescript @types/node --save-dev
 ```
 2. Install TypeSilly.
 ```bash
-npm install type-silly
+npm install typesilly
 ```
 3. Create a TypeScript configuration file (tsconfig.json).
 ```json
