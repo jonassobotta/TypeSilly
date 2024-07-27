@@ -1,14 +1,6 @@
 import * as ts from 'typescript';
 import identifierRenamer from '../src/transformers/idnetifierRenamer';
-
-function compile(source: string, transformers: ts.CustomTransformers): string {
-    const sourceFile = ts.createSourceFile('test.ts', source, ts.ScriptTarget.Latest);
-    const result = ts.transform(sourceFile, transformers.before as ts.TransformerFactory<ts.SourceFile>[] ?? []);
-    
-    const printer = ts.createPrinter();
-    const transformedSourceFile = result.transformed[0] as ts.SourceFile;
-    return printer.printFile(transformedSourceFile);
-}
+import { compile } from './utils/compile';
 
 describe('identifierRenamer transformer', () => {
     it('should rename all identifiers to "foo" followed by _ and a uuid', () => {
