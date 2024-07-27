@@ -1,6 +1,13 @@
 module.exports = {
     preset: 'ts-jest',
     testEnvironment: 'node',
-    testMatch: ['**/test/**/*.(spec|test).[tj]s?(x)'],
+    cache: true,
+    transform: {
+      '^.+\\.tsx?$': ['ts-jest', {
+        tsconfig: 'tsconfig.json',
+        diagnostics: false,
+      }],
+    },
+    watchPathIgnorePatterns: ['<rootDir>/dist/'],
 };
   
