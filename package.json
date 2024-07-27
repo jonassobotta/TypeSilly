@@ -1,8 +1,9 @@
 {
   "name": "typesilly",
-  "version": "1.0.0",
-  "description": "TypeSilly is a just for fun silly typescript custom transformer.",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "A TypeScript transformer that does silly things to your code.",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
     "build": "tsc && node dist/main.js examples/simpleExample.ts",
     "test": "jest"
