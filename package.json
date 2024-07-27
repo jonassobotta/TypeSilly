@@ -1,16 +1,31 @@
 {
   "name": "typesilly",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A TypeScript transformer that does silly things to your code.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {
-    "build": "tsc && node dist/main.js examples/simpleExample.ts",
-    "test": "jest"
+    "build": "tsc && node dist/main.js examples/test.ts",
+    "test": "jest",
+    "start": "npm run build",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonassobotta/TypeSilly.git"
+  },
+  "keywords": [
+    "typescript",
+    "transformer",
+    "silly",
+    "compiler"
+  ],
   "author": "Jonas Sobotta",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonassobotta/TypeSilly"
+  },
+  "homepage": "https://github.com/jonassobotta/TypeSilly#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.11",
@@ -23,5 +38,11 @@
   },
   "dependencies": {
     "uuid": "^10.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "src",
+    "examples",
+    "README.md"  
+  ]
 }
