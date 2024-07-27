@@ -7,7 +7,7 @@ TypeSilly transforms your TypeScript code in fun and unexpected ways, making cod
 To install TypeSilly, you need to have Node.js and npm installed on your machine. You can then install TypeSilly via npm:
 
 ``` bash
-npm install type-silly
+npm install typesilly
 ```
 
 ## Usage
