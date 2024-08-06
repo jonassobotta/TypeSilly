@@ -1,6 +1,6 @@
 {
   "name": "typesilly",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A TypeScript transformer that does silly things to your code.",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
