@@ -76,7 +76,6 @@ greet();
 Compile your code with the TypeSilly transformer:
 
 ```bash
-Copy code
 npx tsc
 node dist/compile.js examples/test.ts
 ```
